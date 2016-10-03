@@ -3,6 +3,7 @@
 consul1:
   image: mmochan/consul
   hostname: consul1
+  container_name: consul1
   ports:
    - "8301:8300"
    - "8401:8400"
@@ -15,6 +16,7 @@ consul1:
 consul2:
   image: mmochan/consul
   hostname: consul2
+  container_name: consul2
   links:
    - consul1
   ports:
@@ -29,6 +31,7 @@ consul2:
 consul3:
   image: mmochan/consul
   hostname: consul3
+  container_name: consul3
   links:
    - consul1
   ports:
